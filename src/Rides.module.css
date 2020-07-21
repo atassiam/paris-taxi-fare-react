@@ -1,0 +1,83 @@
+span:hover{
+    cursor: pointer;
+}
+
+.Collapsible{
+    margin: 3px;
+    width: 350px;
+    padding: 20px;
+}
+
+.Collapsible:hover,
+.CustomTriggerCSSOpen:hover
+{
+    background: #EEF3FE;
+    cursor: pointer;
+}
+
+ .Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid lightGrey;
+  border-top: 0;
+}
+
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .Collapsible__contentInner:last-child {
+      margin-bottom: 0;
+    }
+
+.Collapsible {
+  display: block;
+  font-weight: 400;
+  text-decoration: none;
+  color: grey;
+  position: relative;
+  border: 1px solid white;
+  padding: 10px;
+}
+
+   .Collapsible:after {
+    font-family: 'FontAwesome';
+    content:  url(open.svg);
+    position: absolute;
+    left: 0px;
+    top: 10px;
+    display: block;
+    transition: transform 300ms;
+  } 
+
+  .Collapsible span{
+      margin-left: 15px;
+  }
+
+  .Collapsible.is-open,
+    .Collapsible:after {
+      transform: rotateZ(180deg);
+    }
+
+    .Collapsible.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+  }
+
+.CustomTriggerCSS {
+  transition: background-color 200ms ease;
+}
+
+.CustomTriggerCSSOpen:after {
+    content:  url(close.svg);
+    display: block;
+    transition: background-color 200ms ease;
+}
+
+.Collapsible__custom-sibling {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #CBB700;
+  color: black;
+}
